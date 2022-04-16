@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inflearn Clone</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/f10e3bd7ac.js" crossorigin="anonymous"></script>
+    <script defer src="./main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <div class="content">
+                <div class="brand_header">
+                    <a href="https://www.inflearn.com/" class="brand_logo">
+                        <svg width="110" id="icon_brand_logo" class="brand_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 433 90"><path class="A" d="M79.1 31.6c-2-4.6-4.7-8.7-8.1-12.2-3.5-3.5-7.5-6.3-12.1-8.3S49.3 8 43.9 8c-5.2 0-10.2.9-14.9 2.9s-8.8 4.7-12.4 8.1c-3.6 3.5-6.4 7.5-8.4 12.1A37.14 37.14 0 0 0 5.1 46c0 5.2.9 10.2 2.9 14.9s4.7 8.8 8.2 12.4 7.6 6.4 12.2 8.4c4.7 2 9.6 3.1 14.9 3.1l38.3.3.3-38.5c.1-5.3-.9-10.3-2.8-15zM74 77.4l-30.7-.3c-4.2 0-8.2-.9-11.9-2.5s-7-3.9-9.8-6.7A32.99 32.99 0 0 1 15 58c-1.6-3.8-2.3-7.7-2.3-11.9 0-4.3.9-8.3 2.5-12s3.9-6.9 6.7-9.7c2.9-2.8 6.2-4.9 9.9-6.5 3.8-1.6 7.7-2.3 11.9-2.3 4.3 0 8.3.9 12 2.5s6.9 3.8 9.7 6.7c2.8 2.8 4.9 6.1 6.5 9.8s2.3 7.7 2.3 12L74 77.4z"></path><path class="A" d="M76.9 83.7c-.9 0-1.8-.3-2.5-1L27.6 35.1c-1.4-1.4-1.3-3.6 0-4.9 1.4-1.4 3.6-1.3 4.9 0l46.8 47.6c1.4 1.4 1.3 3.6 0 4.9-.6.7-1.5 1-2.4 1z"></path><path class="A" d="M43.1 47.3c-.4 0-.8-.1-1.2-.2-1.8-.7-2.8-2.7-2.1-4.5l6.3-17.3c.7-1.8 2.7-2.8 4.5-2.1s2.8 2.7 2.1 4.5L46.4 45c-.5 1.4-1.9 2.3-3.3 2.3zm12.2 16.2H33.5C31.6 63.5 30 62 30 60c0-1.9 1.6-3.5 3.5-3.5h21.8c1.9 0 3.5 1.6 3.5 3.5 0 2-1.5 3.5-3.5 3.5zm44.1-32.4V85H88.8V31.1h10.6zm5.6 16.5c1.4-3.2 3.3-6.1 5.8-8.5 2.4-2.4 5.3-4.4 8.6-5.8s6.8-2.1 10.4-2.1c3.8 0 7.3.7 10.5 2.1s6.1 3.3 8.6 5.8c2.5 2.4 4.4 5.3 5.8 8.5s2.1 6.7 2.1 10.5v27h-10.7v-27c0-2.2-.4-4.3-1.3-6.3-.8-2-2-3.7-3.5-5.2s-3.2-2.6-5.2-3.5c-2-.8-4.1-1.3-6.4-1.3-2.2 0-4.3.4-6.3 1.3-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3v27h-10.7v-27c.2-3.7.9-7.2 2.3-10.5zm76.1-26.2c-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3v5.5h21.6v10.7h-21.6V85h-10.7V36.4c0-3.8.7-7.3 2.1-10.5s3.3-6.1 5.8-8.5 5.4-4.4 8.6-5.8c3.3-1.4 6.8-2.1 10.4-2.1h5.3v10.7h-5.3c-2.1 0-4.2.4-6.2 1.2zm43.2-11.9V85h-10.7V9.5h10.7zM270.5 66l7.6 7.6-3.7 3.7c-2.6 2.6-5.5 4.5-8.8 5.9s-6.7 2-10.3 2-7-.7-10.3-2c-3.3-1.4-6.2-3.3-8.8-5.9s-4.6-5.6-5.9-8.9-1.9-6.7-1.9-10.1.6-6.8 1.9-10.1 3.2-6.2 5.9-8.9c2.6-2.6 5.6-4.6 8.9-5.9s6.7-2 10.1-2 6.8.7 10.1 2 6.3 3.3 8.9 5.9l3.7 3.7L248 72.9c3 1.5 6.3 2 9.7 1.5s6.4-2.1 8.9-4.6l3.9-3.8zm-26.8-19.3c-3.2 3.2-4.8 7-4.8 11.5 0 2.5.6 4.8 1.7 7.1l10.6-10.6 6.4-6.3 4.7-4.7c-3-1.5-6.3-2-9.7-1.6-3.3.5-6.3 2.1-8.9 4.6zm64.8-15.6c3.8 0 7.3.7 10.5 2.1s6.1 3.3 8.5 5.8a27.88 27.88 0 0 1 5.8 8.5c1.4 3.2 2.1 6.7 2.1 10.5v27h-26.9c-3.7 0-7.2-.7-10.4-2.1-3.3-1.4-6.2-3.3-8.6-5.8-2.5-2.5-4.4-5.4-5.8-8.6-1.4-3.3-2.1-6.8-2.1-10.4 0-3.8.7-7.3 2.1-10.5s3.3-6.1 5.8-8.5 5.4-4.4 8.6-5.8c3.3-1.5 6.8-2.2 10.4-2.2zm16.2 43.2V58c0-2.2-.4-4.3-1.3-6.3-.8-2-2-3.7-3.5-5.2s-3.2-2.6-5.2-3.5c-2-.8-4.1-1.3-6.3-1.3s-4.4.4-6.4 1.3c-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3s.4 4.4 1.3 6.4c.8 2 2 3.7 3.5 5.2s3.2 2.6 5.2 3.5c2 .8 4.1 1.3 6.4 1.3h16.3zm46.2-43.2v10.7h-5.4c-2.2 0-4.3.4-6.3 1.3-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3v27h-10.8V58c0-3.8.7-7.3 2.1-10.5s3.3-6.1 5.8-8.5 5.4-4.4 8.6-5.8c3.3-1.4 6.8-2.1 10.4-2.1h5.6zm5.3 16.5c1.4-3.2 3.3-6.1 5.8-8.5 2.4-2.4 5.3-4.4 8.6-5.8s6.8-2.1 10.4-2.1c3.8 0 7.3.7 10.5 2.1s6.1 3.3 8.6 5.8c2.5 2.4 4.4 5.3 5.8 8.5s2.1 6.7 2.1 10.5v27h-10.7v-27c0-2.2-.4-4.3-1.3-6.3-.8-2-2-3.7-3.5-5.2s-3.2-2.6-5.2-3.5c-2-.8-4.1-1.3-6.4-1.3-2.2 0-4.3.4-6.3 1.3-2 .8-3.7 2-5.2 3.5s-2.6 3.2-3.5 5.2c-.8 2-1.3 4.1-1.3 6.3v27h-10.7v-27c.2-3.7.9-7.2 2.3-10.5z"></path><title>인프런 브랜드 로고</title></svg>
+                    </a>
+                </div>
+                <div class="navbar-menu">
+                    <div class="navbar-left">
+                        <div class="navbar-left--lecture padding">
+                            <a href="" class="aa">
+                                <div>강의</div>
+                            </a>
+                            <ul class="navbar-dropdown1 is-boxed">
+                                <li>
+                                    <a href="https://www.inflearn.com/courses/it-programming" class="navbar-item">개발 프로그래밍</a>
+                        
+                                </li>
+                                <li>
+                                    <a href="#" class="navbar-item">보안 네트워크</a>
+                                    <!-- <ul class="navbar-dropdown step_2"></ul>   -->
+                                </li>
+                                <li>
+                                    <a href="#" class="navbar-item">데이터 사이언스</a>
+                                    <!-- <ul class="navbar-dropdown step_2"></ul>   -->
+                                </li>
+                                <li>
+                                    <a href="#" class="navbar-item">크리에이티브</a>
+                                    <!-- <ul class="navbar-dropdown step_2"></ul>   -->
+                                </li>
+                                <li>
+                                    <a href="#" class="navbar-item">직무 · 마케팅</a>
+                                    <!-- <ul class="navbar-dropdown step_2"></ul>   -->
+                                </li>
+                                <li>
+                                    <a href="#" class="navbar-item">학문 · 외국어</a>
+                                    <!-- <ul class="navbar-dropdown step_2"></ul>   -->
+                                </li>
+                                <li>
+                                    <a href="#" class="navbar-item">교양</a>
+                                    <!-- <ul class="navbar-dropdown step_2"></ul>   -->
+                                </li>
+                                <li>
+                                    <a href="#" class="navbar-item">청강대 게임스쿨</a>
+                                    <!-- <ul class="navbar-dropdown step_2"></ul>  -->
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="navbar-left--loadmap padding">
+                            <a href="https://www.inflearn.com/roadmaps">로드맵</a>
+                        </div>
+                        <div class="navbar-left--mentoring padding">
+                            <a href="https://www.inflearn.com/mentors">멘토링</a>
+                        </div>
+                        <div class="navbar-left--community padding">
+                            <a href="https://www.inflearn.com/community/questions">
+                                <a href="">커뮤니티</a>
+                                <ul class="navbar-dropdown2 is-boxed">
+                                    <li>
+                                        <span class="icon">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </span>
+                                        <a href="https://www.inflearn.com/courses/it-programming" class="navbar-item">질문 & 답변</a>
+                                        <!-- <ul class="navbar-dropdown step_2">
+                                            <li>
+                                                <a href="" class="nav-item">웹 개발</a>
+                                                <ul class="navbar-dropdown step_3"></ul>
+                                            </li>
+                                            <li>
+                                                <a href="" class="nav-item">프론트 엔드</a>
+                                                <ul class="navbar-dropdown step_3"></ul>
+                                            </li>
+                                            <li>
+                                                <a href="" class="nav-item">백엔드</a>
+                                                <ul class="navbar-dropdown step_3"></ul>
+                                            </li>
+                                            <li>
+                                                <a href="" class="nav-item">풀스택</a>
+                                                <ul class="navbar-dropdown step_3"></ul>
+                                            </li>
+                                            <li>
+                                                <a href="" class="nav-item">모바일 웹 개발</a>
+                                                <ul class="navbar-dropdown step_3"></ul>
+                                            </li>
+                                            <li>
+                                                <a href="" class="nav-item">프로그래밍 언어</a>
+                                                <ul class="navbar-dropdown step_3"></ul>
+                                            </li>
+                                            <li>
+                                                <a href="" class="nav-item">알고리즘 · 자료구조</a>
+                                                <ul class="navbar-dropdown step_3"></ul>
+                                            </li>
+                                            <li>
+                                                <a href="" class="nav-item">데이터 사이언스</a>
+                                                <ul class="navbar-dropdown step_3"></ul>
+                                            </li>
+                                            <li>
+                                                <a href="" class="nav-item">데이터 베이스</a>
+                                                <ul class="navbar-dropdown step_3"></ul>
+                                            </li>
+                                            <li>
+                                                <a href="" class="nav-item">데브옵스 · 인프라</a>
+                                                <ul class="navbar-dropdown step_3"></ul>
+                                            </li>
+                                            <li>
+                                                <a href="" class="nav-item">개발도구</a>
+                                                <ul class="navbar-dropdown step_3"></ul>
+                                            </li>
+                                            <li>
+                                                <a href="" class="nav-item">게임 개발</a>
+                                                <ul class="navbar-dropdown step_3"></ul>
+                                            </li>
+                                        </ul> -->
+                                    </li>
+                                    <li>
+                                        <span class="icon">
+                                            <i class="fa-solid fa-pencil"></i>
+                                        </span>
+                                        <a href="#" class="navbar-item">자유주제</a>
+                                        <!-- <ul class="navbar-dropdown step_2"></ul>   -->
+                                    </li>
+                                    <li>
+                                        <span class="icon">
+                                            <i class="fa-solid fa-graduation-cap"></i>
+                                        </span>
+                                        <a href="#" class="navbar-item">스터디</a>
+                                        <!-- <ul class="navbar-dropdown step_2"></ul>   -->
+                                    </li>
+                                    <li>
+                                        <span class="icon">
+                                            <i class="fa-solid fa-comment"></i>
+                                        </span>
+                                        <a href="#" class="navbar-item">수강평</a>
+                                        <!-- <ul class="navbar-dropdown step_2"></ul>   -->
+                                    </li>
+                                    <li>
+                                        <span class="icon">
+                                            <i class="fa-solid fa-book-open-reader"></i>
+                                        </span>
+                                        <a href="#" class="navbar-item">멘토링 후기</a>
+                                        <!-- <ul class="navbar-dropdown step_2"></ul>   -->
+                                    </li>
+                                    <li>
+                                        <span class="ico">
+                                            <i class="fa-solid fa-box-archive"></i>
+                                        </span>
+                                        <a href="#" class="navbar-item">인프런 스토리</a>
+                                        <!-- <ul class="navbar-dropdown step_2"></ul>   -->
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="navbar-left--job padding">
+                            <a href="">
+                                <span>채용공고</span>
+                            </a>
+                            <ul class="navbar-dropdown3 is-boxed">
+                                <li>기업채용</li>
+                                <li>인프런채용</li>
+                            </ul>
+                            <a href="https://www.inflearn.com/positions?page=1">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-right">
+                        <div class="navbar-right--search_bar">
+                            <button>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="navbar-right--button">
+                            <div class="button1 btn">지식공유참여</div>
+                            <div class="button2 btn">로그인</div>
+                            <div class="button3 btn">회원가입</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="inner">
+            <div class="hero--main">
+                <div class="hero-tags">
+                    <div style="color:#ffffff;background-color:#00c471;">10년 후 내 모습은?</div>
+                </div>
+                <h1 class="admin_hero_title title is-3 bold" style="color: #ffffff;">미래의 나를 찾아 떠나는 여행</h1>
+                <div class="cover_left" id="cover_left_0" style="background: linear-gradient(to bottom, rgba(146,87,227,0),
+                                                         rgba(146,87,227,0.47) 69%,
+                                                       #9257e3 100%)">
+                <p class="text is-1" style="color: #ffffff">타임머신 타고 10년 후로 슝~🛸<br>미래의 나를 테스트해봐요</p>
+            </div>
+            </div>
+            <div class="hero--img">
+                <img src="./img/보라색배경.png" alt="purple background">
+            </div>
+        </div>
+    </section>
+    <section class="nav">
+        <div class="inner">
+            <div class="hero-nav">
+                <div class="nav--button">
+                    <div class="btn--index">
+                        <span class="current-ind">1/10</span>
+                    </div>
+                    <div class="btn--controll">
+                        <button type="button">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button type="button">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+                        </button>
+                        <button type="button">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <span class="divider"></span>
+                <div class="nav--list">
+                    <span class="nav--bullet">10년 후 나는?</span>
+                    <span class="nav--bullet">TOP 50</span>
+                    <span class="nav--bullet">합격하는 이력서</span>
+                    <span class="nav--bullet">개발자 취업</span>
+                    <span class="nav--bullet">입문 로드맵</span>
+                    <span class="nav--bullet">지식공유신청</span>
+                    <span class="nav--bullet">나에게 맞는 강의</span>
+                    <span class="nav--bullet">신규 강의</span>
+                    <button type="button">
+                        <i class="fa-light fa-chevron-down"></i>
+                    </button>
+                    <div class="a">
+                        <div class="aa">
+                            <h3>진행중인 모든 이벤트</h3>
+                            <button type="button">닫기</button>
+                            <!-- <span class="divider"></span> -->
+                        </div>
+                        <div class="aa-main">
+                            <span class="nav--bullet">10년 후 나는?</span>
+                            <span class="nav--bullet">TOP 50</span>
+                            <span class="nav--bullet">합격하는 이력서</span>
+                            <span class="nav--bullet">개발자 취업</span>
+                            <span class="nav--bullet">입문 로드맵</span>
+                            <span class="nav--bullet">지식공유신청</span><br>
+                            <span class="nav--bullet">나에게 맞는 강의</span>
+                            <span class="nav--bullet">신규 강의</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav--btn"></div>
+            </div>
+        </div>
+    </section>
+    <section class="line"></section>
+
+    <section class="search">
+        <div class="inner">
+            <h1>인프런에서 성장을 도와드려요</h1>
+            <div class="input--container">
+                <input type="text" class="search__input" placeholder="배우고 싶은 지식을 입력해보세요.">
+                <button class="search-btn">
+                    <span class="icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="tag-section">
+        <ul class="container tag-section__container">
+            <li class="tag-section__tag-item">
+                <span>#MVC</span>
+            </li>
+            <li class="tag-section__tag-item">
+                <span>#Spring</span>
+            </li>
+            <li class="tag-section__tag-item">
+                <span>#BackEnd</span>
+            </li>
+            <li class="tag-section__tag-item">
+                <span>#JPA</span>
+            </li>
+            <li class="tag-section__tag-item">
+                <span>React</span>
+            </li>
+            <li class="tag-section__tag-item">
+                <span>#Vue</span>
+            </li>
+            <li class="tag-section__tag-item">
+                <span>#Javascript</span>
+            </li>
+            <li class="tag-section__tag-item">
+                <span>#Java</span>
+            </li>
+            <li class="tag-section__tag-item">
+                <span>#rra</span>
+            </li>
+            <li class="tag-section__tag-item">
+                <span>#lala</span>
+            </li>
+        </ul>
+    </section>
+
+    <section class="welcome root">
+        <div class="inner">
+            <div class="main_course_list">
+                <div class="header">
+                    <div class="courses_header">
+                        <a href="#">
+                            <h1 class="title is-4 is-spaced">
+                              여기서 시작해 보세요!
+                              <span class="courses_tag">Ready!!</span>
+                              <span class="icon">
+                                <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </h1>
+                        </a>
+                        <p class="subtext is-2">이미 검증된 쉽고 친절한 입문 강의!!</p>
+                        
+                    </div>
+                </div>
+                <div class="welcome_content">
+                    <div class="content--list">
+                        <figure class="img">
+                            <img src="./img/resume.jpeg" alt="">
+                        </figure>
+                        <p class="description">
+                            실제 이력서 사례로 알아보는 [합격하는 이력서]작성가이드
+                        </p>
+                        <div class="instructor">
+                            워니
+                        </div>
+                        <span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="review_cnt">
+                                (9)
+                            </span>
+                        </span>
+                        <div class="price">₩49,500</div>
+                        <div class="tags">
+                            <span class="tag " style="background-color: hsl(321,63%,90%)">+100명</span>
+                            <span class="tag is-hidden-student" style="background-color: hsl(155,40%,87%)">독점</span>
+                            <span class="tag " style="background-color: hsl(182,75%,94%)">새강의</span>
+                        </div>
+                    </div>
+                    <div class="content--list">
+                        <figure class="img">
+                            <img src="./img/git.png" alt="">
+                        </figure>
+                        <p class="description">
+                            제대로 파는 Git & Github - by 얄코
+                        </p>
+                        <div class="instructor">
+                            얄팍한 코딩사전
+                        </div>
+                        <span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="review_cnt">
+                                (59)
+                            </span>
+                        </span>
+                        <div class="price">₩44,000</div>
+                        <div class="tags">
+                            <span class="tag " style="background-color: hsl(321,63%,90%)">+900명</span>
+                            <span class="tag is-hidden-student" style="background-color: hsl(155,40%,87%)">독침</span>
+                            <span class="tag " style="background-color: hsl(182,75%,94%)">새강의</span>
+                        </div>
+                    </div>
+                    <div class="content--list">
+                        <figure class="img">
+                            <img src="./img/python.png" alt="">
+                        </figure>
+                        <p class="description">
+                            프로그래밍 시작하기: 파이썬 입문(Inflearn Original)
+                        </p>
+                        <div class="instructor">
+                            인프런
+                        </div>
+                        <span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="review_cnt">
+                                (595)
+                            </span>
+                        </span>
+                        <div class="price">₩55,500</div>
+                        <div class="tags">
+                            <span class="tag " style="background-color: hsl(321,63%,90%)">+12100명</span>
+                            <!-- <span class="tag is-hidden-student" style="background-color: hsl(155,40%,87%)">독점</span> -->
+                            <!-- <span class="tag " style="background-color: hsl(182,75%,94%)">새강의</span> -->
+                        </div>
+                    </div>
+                    <div class="content--list">
+                        <figure class="img">
+                            <img src="./img/unity.png" alt="">
+                        </figure>
+                        <p class="description">
+                            [C#과 유니티로 만드는 MMORPG 게임 개발 시리즈] Part1: C# 기초 프로그래밍 입문
+                        </p>
+                        <div class="instructor">
+                            Rookiss
+                        </div>
+                        <span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="review_cnt">
+                                (11)
+                            </span>
+                        </span>
+                        <div class="price">₩44,000</div>
+                        <div class="tags">
+                            <span class="tag " style="background-color: hsl(321,63%,90%)">+3200명</span>
+                            <!-- <span class="tag is-hidden-student" style="background-color: hsl(155,40%,87%)">독점</span>
+                            <span class="tag " style="background-color: hsl(182,75%,94%)">새강의</span> -->
+                        </div>
+                    </div>
+                    <div class="content--list">
+                        <figure class="img">
+                            <img src="./img/c++.jpeg" alt="">
+                        </figure>
+                        <p class="description">
+                            [C++과 언리얼로 만드는 MMORPG 게임 개발 시리즈] Part1: C++ 프로그래밍 입문
+                        </p>
+                        <div class="instructor">
+                            Rookiss
+                        </div>
+                        <span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="review_cnt">
+                                (117)
+                            </span>
+                        </span>
+                        <div class="price">₩110,000</div>
+                        <div class="tags">
+                            <span class="tag " style="background-color: hsl(321,63%,90%)">+1200명</span>
+                            <!-- <span class="tag is-hidden-student" style="background-color: hsl(155,40%,87%)">독점</span>
+                            <span class="tag " style="background-color: hsl(182,75%,94%)">새강의</span> -->
+                        </div>
+                    </div>
+                    <div class="chevron1">
+                        <i class="fa-solid fa-circle-chevron-left fa-2x"></i>
+                    </div>
+                    <div class="chevron2">
+                        <i class="fa-solid fa-circle-chevron-right fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
