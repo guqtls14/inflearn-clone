@@ -13,3 +13,22 @@ $btn.addEventListener('click',function(){
         // $i.className = "fa-light .fa-circle-chevron-down"
     }
 })
+
+// swiper
+let swiper = new Swiper(".mySwiper", {
+    slidesPerView:5,
+    // spaceBetween:10,
+    centeredSlides: true,
+    loop:true,
+    autoplay:{
+        delay:2000,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction"
+      },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });

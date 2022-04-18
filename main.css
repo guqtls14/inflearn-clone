@@ -19,9 +19,15 @@ body{
     line-height: 1.5;
     font-family: Noto Sans KR,-apple-system,"system-ui",BlinkMacSystemFont,Apple SD Gothic Neo,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica;
 }
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    background-color: lightgray;
+}
 header .inner{
     height: 64px;
-
 }
 header .inner .content .brand_header{
     display: flex;
@@ -51,16 +57,9 @@ header .inner .content{
 .navbar-menu .navbar-left .navbar-left--lecture{
     position: relative;
 }
-.navbar-menu .navbar-left .padding:hover .is-boxed{
-    opacity: 1;
-}
+.navbar-menu .navbar-left .navbar-left--lecture:hover .is-boxed{
+    display: block;
 
-.navbar-menu .navbar-left .navbar-left--lecture .navbar-item{
-    padding:0.375rem 1rem;
-}
-.navbar-menu .navbar-left .navbar-dropdown1{
-    opacity: 0;
-    display:block;
     position: absolute;
     top: 40px;
     width: 180px;
@@ -71,18 +70,25 @@ header .inner .content{
     background-color: whitesmoke;
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
-    /* border: 1px solid green; */
-    box-shadow: 8px 5px 8px 1px rgb(0 10 18 / 10%), 0 0 0 1px rgb(0 10 18 / 10%);
-   
+
+    box-shadow: 8px 5px 8px 1px rgb(0 10 18 / 10%), 0 0 0 1px rgb(0 10 18 / 10%); 
     display: flex;
     flex-direction: column;
     justify-content:space-between;
 }
 
-.navbar-menu .navbar-left .navbar-dropdown2{
-    opacity: 0;
+.navbar-menu .navbar-left .navbar-left--lecture .navbar-item{
+    padding:0.375rem 1rem;
+}
+.navbar-menu .navbar-left .navbar-dropdown1{
+    display:none;
+
+}
+
+.navbar-menu .navbar-left .navbar-left--community:hover .navbar-dropdown2{
+    display: block;
     position: absolute;
-    top: 50px;
+    top: 45px;
     right: 100px;
     width: 120px;
     height: 198px;
@@ -100,10 +106,14 @@ header .inner .content{
     flex-direction: column;
     justify-content:space-between;
 }
-.navbar-menu .navbar-left .navbar-dropdown3{
-    opacity: 0;
+.navbar-menu .navbar-left .navbar-dropdown2{
+    display: none;
+
+}
+.navbar-menu .navbar-left .navbar-left--job:hover .navbar-dropdown3{
+    display: block;
     position: absolute;
-    top: 30px;
+    top: 25px;
     right: 0;
     width: 132px;
     height: 81px;
@@ -119,6 +129,10 @@ header .inner .content{
     display: flex;
     flex-direction: column;
     justify-content:space-between;
+}
+.navbar-menu .navbar-left .navbar-dropdown3{
+    display: none;
+
 }
 .navbar-menu .navbar-left .navbar-dropdown3 li:hover{
     color: green;
@@ -199,9 +213,9 @@ header .inner .content{
 
 /* hero */
 .hero{
-
+    margin-top: 64px;
     background-color: #9257e3;
-    z-index: 1;
+    /* z-index: 1; */
 }
 .hero .inner{
     height:320px;
@@ -216,7 +230,7 @@ header .inner .content{
     height: 148px;
     position: absolute;
     top: 50px;
-    z-index: 1;
+    /* z-index: 1; */
 }
 .hero--main .hero-tags{
     display: flex;
@@ -226,13 +240,13 @@ header .inner .content{
 }
 .hero--main .admin_hero_title{
     font-size: 2rem;
-      z-index: 1;
+      /* z-index: 1; */
 }
 .hero--main .text.is-1{
     font-size: 1rem;
     margin: 0;
     line-height: 1.6;
-    z-index: 1;
+    /* z-index: 1; */
 }
 .hero--img{
     position:relative;
@@ -425,7 +439,7 @@ header .inner .content{
     margin-top: 40px;
 }
 
-.welcome_content{
+.swiper-wrapper{
     position: relative;
     width: 100%;
     height: 100%;
@@ -436,11 +450,66 @@ header .inner .content{
     cursor: pointer;
 
 }
-.content--list{
+.swiper-slide{
     margin: 6px;
     max-width: calc((100% - 8px)/5);
+    position:relative;
 }
-.content--list img{
+
+.swiper-wrapper .swiper-slide .list--description{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    width:100%;
+    height:100%;
+    top: 0;
+    /* left: 0; */
+    background-color: black;
+    opacity:0;
+
+    transition:all var(--animation-duration) ease-in;
+}
+.swiper-wrapper .swiper-slide:hover .list--description{
+    opacity:0.8;
+    color: #fff;
+}
+.course_title{
+    font-size: .95rem;
+    line-height: 1.25;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+
+    color: #fff;
+}
+.course_description{
+    line-height: 1.6em;
+    font-size: .85rem;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+.back_course_metas{
+    width: 100%;
+    color: #c5ebf8;
+}
+.back_course_metas>div{
+    width: 100%;
+    margin-bottom: 0.07rem;
+}
+.back_course_metas .course_level{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: nowrap;
+    height: 1.2rem;
+}
+.swiper-slide img{
     width: 232px;
     height: 150px;
 }
@@ -476,7 +545,7 @@ section .main_course_list .header .subtext {
     font-size: .9375rem;
 }
 
-/* .content--list .description{
+/* .swiper-slide .description{
     flex: 1 1 auto;
     font-weight: 700;
     margin-bottom: 0;
@@ -490,27 +559,27 @@ section .main_course_list .header .subtext {
     -webkit-box-orient: vertical;
     white-space: pre-wrap;
 } */
-.content--list .instructor {
+.swiper-slide .instructor {
     color: #7d7d7d;
     font-size: .9rem;
 }
-.content--list span .fa-star{
+.swiper-slide span .fa-star{
 
     color: #fdcc11;
     width: 0.9rem;
     height: 0.9rem;
 
 }
-.content--list .price{
+.swiper-slide .price{
     font-weight: 700;
     color: #175cbe;
 }
-.content--list .review_cnt{
+.swiper-slide .review_cnt{
     font-size: .5rem;
     bottom: 0.3rem;
     color: #4a4a4a;
 }
-.content--list .tags{
+.swiper-slide .tags{
     align-items: center;
     display: flex;
     flex-wrap: wrap;
@@ -520,7 +589,7 @@ section .main_course_list .header .subtext {
 .tags .tag:not(:last-child) {
     margin-right: 0.5rem;
 }
-.content--list .tags .tag:not(body){
+.swiper-slide .tags .tag:not(body){
     align-items: center;
     background-color: #fff;
     border-radius: 4px;
@@ -537,18 +606,38 @@ section .main_course_list .header .subtext {
 .tags .tag {
     margin-bottom: 0.5rem;
 }
-.chevron1{
+.swiper-wrapper .swiper-button-prev,
+.swiper-wrapper .swiper-button-next {
+    width: 42px;
+    height: 42px;
+    border: 2px solid #333;
+    border-radius: 50%;
     position: absolute;
+    top:0;
+    z-index: 1;
+    cursor: pointer;
+    outline: none;
 
-    top: 150px;
-    opacity: 0.1;
-    left: -20px;
+    /* display: flex;
+    justify-content:center;
+    align-items: center; */
+
+    transition: .4s;
 }
-.chevron2{
-    position: absolute;
-    top: 150px;
-    opacity: 0.1;
-    right: -30px;
+.swiper-wrapper .swiper-button-prev{
+    left: 100px;
+    color: red;
+    /* margin-left: -480px; */
+}
+.swiper-wrapper .swiper-button-next{
+    right: 0;
+    /* margin-right: -480px; */
+}
+
+.swiper-wrapper .swiper-button-prev:hover,
+.swiper-wrapper .swiper-button-next:hover{
+    background-color: #333;
+    color: #fff;
 }
 .header .courses_header .icon .fa-chevron-right{
    font-size: 12px;
