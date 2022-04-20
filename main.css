@@ -1,6 +1,11 @@
 *{
     box-sizing: border-box;
 }
+/* 화살표 크기 */
+:root {
+    --swiper-navigation-size: 22px;
+    --swiper-theme-color: black;
+}
 a{
     text-decoration: none;
     color: inherit;
@@ -143,16 +148,17 @@ header .inner .content{
    
 }
 .navbar-left--job span::after{
-    content:'N';
-    display:flex;
+    content: 'N';
+    display: flex;
     position: absolute;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-    width: 12px;
-    height: 12px;
+    width: 11px;
+    height: 11px;
     border-radius: 50%;
+    padding: 3px;
     background-color: red;
-    top: -3px;
+    top: -8px;
     left: 65px;
     color: white;
 }
@@ -439,20 +445,20 @@ header .inner .content{
     margin-top: 40px;
 }
 
-.swiper-wrapper{
+.welcome.root .main_course_list .swiper-wrapper{
     position: relative;
     width: 100%;
     height: 100%;
     z-index: 1;
     display: flex;
-
+    /* flex-wrap: wrap; */
     box-sizing: content-box;
     cursor: pointer;
 
 }
 .swiper-slide{
     margin: 6px;
-    max-width: calc((100% - 8px)/5);
+    /* max-width: calc((100% - 8px)/5); */
     position:relative;
 }
 
@@ -545,20 +551,7 @@ section .main_course_list .header .subtext {
     font-size: .9375rem;
 }
 
-/* .swiper-slide .description{
-    flex: 1 1 auto;
-    font-weight: 700;
-    margin-bottom: 0;
-    line-height: 1.5em;
-    height: 3rem;
-    font-size: 1rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    white-space: pre-wrap;
-} */
+
 .swiper-slide .instructor {
     color: #7d7d7d;
     font-size: .9rem;
@@ -606,41 +599,11 @@ section .main_course_list .header .subtext {
 .tags .tag {
     margin-bottom: 0.5rem;
 }
-.swiper-wrapper .swiper-button-prev,
-.swiper-wrapper .swiper-button-next {
-    width: 42px;
-    height: 42px;
-    border: 2px solid #333;
-    border-radius: 50%;
-    position: absolute;
-    top:0;
-    z-index: 1;
-    cursor: pointer;
-    outline: none;
 
-    /* display: flex;
-    justify-content:center;
-    align-items: center; */
-
-    transition: .4s;
-}
-.swiper-wrapper .swiper-button-prev{
-    left: 100px;
-    color: red;
-    /* margin-left: -480px; */
-}
-.swiper-wrapper .swiper-button-next{
+.swiper-pagination{
+    bottom: 40px;
+    left: 0;
     right: 0;
-    /* margin-right: -480px; */
-}
-
-.swiper-wrapper .swiper-button-prev:hover,
-.swiper-wrapper .swiper-button-next:hover{
-    background-color: #333;
-    color: #fff;
-}
-.header .courses_header .icon .fa-chevron-right{
-   font-size: 12px;
 }
 .description{
 
@@ -653,4 +616,285 @@ section .main_course_list .header .subtext {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 
+}
+
+/* roadmap */
+.roadmap{
+    margin-top: 50px;
+}
+.roadmap--main .swiper{
+    width: 1200px;
+    height: 325px;
+}
+.roadmap--main .swiper-wrapper .card{
+    width: 291;
+    /* height: 100%; */
+}
+.roadmap--main .swiper-wrapper .swiper-slide .card-image  {
+    width: 290px;
+    height: 152px;
+}
+.roadmap--main .swiper-wrapper .swiper-slide .card-image .image img{
+    width: 290px;
+    height: 152px;
+}
+.roadmap--main .swiper-wrapper .swiper-slide .card .card-content{
+    padding: 1.5rem;
+}
+
+.roadmap--main .swiper-wrapper .swiper-slide .card .card-content .content h5{
+    font-size: .95rem;
+    font-weight: 700;
+    color: #363636;
+}
+.roadmap--main  .swiper--btn{
+    position: relative;
+}
+.roadmap--main  .swiper--btn .swiper-button-prev,
+.roadmap--main  .swiper--btn .swiper-button-next {
+    position: absolute;
+    top:-180px;
+    opacity:0.6;
+    background-color: lightgray;
+    color: black;
+    border-radius: 50%;
+    padding:20px;
+}
+/* curation */
+.curation{
+    margin-top: 50px;
+}
+.curation .main .main--img{
+
+    width: 376px;
+    height: 196px;
+
+    display: flex;
+
+}
+.curation .main .main--img a{
+    margin-right: 38px;
+}
+.curation .img img{
+    width: 376px;
+    height: 196px;
+}
+.curation .text{
+    color: #595959;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    height: 3rem;
+    width: 100%;
+
+    font-size: 1rem;
+}
+
+/* newLeture */
+.newLecture{
+    margin-top: 150px;
+}
+.newLecture .card-content{
+    padding: 0.5rem 0;
+}
+.newLecture .swiper .swiper-slide{
+    width: 231.2px;
+
+}
+/* @media screen and (min-width: 1240px)   {
+    .newLecture .swiper .swiper-slide {
+        max-width: calc((100% - 8px)/5);
+    }
+} */
+.newLecture .card-content .course_title{
+    position: relative;
+    font-size: .95rem;
+    line-height: 1.25;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: black;
+    top: 0;
+}
+.newLecture .card-content .instructor{
+    color: #7d7d7d;
+    font-size: .9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: nowrap;
+}
+.newLecture .card-content .rating{
+    position: relative;
+}
+
+.newLecture .card-content .price{
+
+}
+.newLecture .card-content .tags{
+
+}
+
+.newLecture  .swiper--btn{
+    position: relative;
+}
+.newLecture  .swiper--btn .swiper-button-prev,
+.newLecture  .swiper--btn .swiper-button-next {
+    position: absolute;
+    top:-180px;
+    opacity:0.6;
+    background-color: lightgray;
+    color: black;
+    border-radius: 50%;
+    padding:20px;
+}
+/* review */
+.review .content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 90px;
+    margin-top: 60px;
+}
+.review .content .content--left{
+    max-width: 480px;
+    width: 100%;
+    padding: 40px 16px 40px 0;
+}
+.review .content .content--right{
+    max-width: 590px;
+    width: 100%;
+}
+.review .content .content--right .swiper{
+   height: 480px;
+   position: relative;
+}
+.review .content .content--right .swiper-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+.review .content .content--right .swiper-wrappe .swiper-slide .swiper-slide-activer{
+
+    height: 95px;
+
+}
+.review .content .content--right .swiper-wrapper .swiper-slide{
+    width: auto;
+    height: auto;
+    background-color: #f9f9f9;
+    /* margin: 5px; */
+
+}
+section.review .content--left .title {
+    color: #242424;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.review .content--left .title.is-2 {
+    font-size: 2.25rem;
+    /* font-size: 40px; */
+}
+section.review .content--left .text.text.is-1 {
+    font-size: 1rem;
+}
+
+section.review .content--left .buttons .button {
+    font-size: 16px;
+    color: #333;
+    border-radius: 3px;
+    border: 1px solid #1dc078;
+    background-color: #fff;
+    margin-right:5px;
+}
+section.review .content--left .buttons .button:hover{
+    background-color: green;
+    color: white;
+}
+.space-inset-stretch-5 {
+    padding: 10px 16px;
+}
+.buttons:last-child {
+    margin-bottom: -0.5rem;
+}
+section.review .content--left .buttons {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+section.review .content--left .text {
+    color: #757575;
+    margin-bottom: 36px;
+}
+.review .content .content--right .swiper-wrapper .swiper-slid .box_top,
+.review .content .content--right .swiper-wrapper .swiper-slid .box_bottom{
+    width: 528px;
+    height: 95px;
+}
+
+
+/* banner2 */
+.banner2 .swiper {
+    position: relative;
+ 
+}
+.banner2 .swiper .swiper-slide{
+    padding: 36px 0;
+    background-repeat: no-repeat;
+    background-position:center;
+    box-sizing: border-box;
+    background-size:cover;
+}
+.banner2 .swiper .swiper-wrapper .swiper-slide .container{
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.banner2 .container .swiper{
+  
+}
+.banner2 .swiper .btn--container{
+    position: absolute;
+    right: 230px;
+    top:120px;
+    display: flex;
+}
+
+.banner2 .swiper .swiper-button-next,
+.banner2 .swiper .swiper-button-prev{
+
+    width: 28px;
+    height: 28px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    background-color: #fff;
+    color: #1e1e1e;
+    font-size: 20px;
+    cursor: pointer;
+    right:4px;
+    justify-content: center;
+    position: relative;
+}
+.swiper-button-prev{
+    left: 0;
+}
+
+section.banner2 .title {
+    font-weight: 400;
+    color: black;
+    margin-bottom: 16px;
+    /* white-space: pre; */
+}
+section.banner2 .button {
+    background: #fff;
+    color: #1dc078;
+    border: none;
 }
