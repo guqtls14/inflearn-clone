@@ -70,9 +70,9 @@ let swiper4 = new Swiper(".review .swiper",{
   slidesPerView:3,
   spaceBetween:20,
   loop:true,
-  autoplay:{
-    delay:3000,
-},
+//   autoplay:{
+//     delay:3000,
+// },
 })
 
   // banner2
