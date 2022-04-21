@@ -67,8 +67,8 @@ var swiper3 = new Swiper(".newLecture .swiper", {
 // review
 let swiper4 = new Swiper(".review .swiper",{
   direction: "vertical",
-  slidesPerView:4,
-  spaceBetween:10,
+  slidesPerView:3,
+  spaceBetween:20,
   loop:true,
   autoplay:{
     delay:3000,
