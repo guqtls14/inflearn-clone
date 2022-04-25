@@ -1,20 +1,21 @@
 
 
 // 화살표바꾸기
-const $btn = document.querySelector('.fa-light');
-const $i = document.querySelector('button i');
+const $btn = document.querySelector('.fa-solid.fa-circle-chevron-down');
+console.log($btn)
+const $i = document.querySelector('.nav--list button i');
 const $a = document.querySelector('.a');
 $btn.addEventListener('click',function(){
     if($a.style.display === 'block') {
         $a.style.display = 'none';
-        $i.className = 'fa-light .fa-circle-chevron-up'
+        $i.className = 'fa-solid fa-circle-chevron-up'
     } else{
         $a.style.display = 'block';
-        // $i.className = "fa-light .fa-circle-chevron-down"
+        $i.className = "fa-solid fa-circle-chevron-down"
     }
 })
 
-// swiper
+// swiper -> welcome
 let swiper1 = new Swiper(".mySwiper", {
     slidesPerView:5,
     // spaceBetween:10,
@@ -22,6 +23,21 @@ let swiper1 = new Swiper(".mySwiper", {
     loop:true,
     autoplay:{
         delay:4000,
+    },
+    breakpoints:{
+      100:{
+        slidesPerView: 2, 
+        spaceBetween: 10       
+      },
+
+      640:{
+        slidesPerView: 3, 
+        spaceBetween: 10
+      },
+      800:{
+        slidesPerView: 5, 
+        spaceBetween: 10
+      },
     },
     // pagination: {
     //     el: ".swiper-pagination",
@@ -36,8 +52,9 @@ let swiper1 = new Swiper(".mySwiper", {
 //   roadmap
 var swiper2 = new Swiper(".roadmap .swiper", {
     slidesPerView:4,
-    spaceBetween:65,
-    centeredSlides: true,
+    spaceBetween:10,
+    // slidesPerGroup : 4,
+    // centeredSlides: true,
     loop:true,
     autoplay:{
         delay:3000,
@@ -51,14 +68,16 @@ var swiper2 = new Swiper(".roadmap .swiper", {
 
 //  new lecture
 var swiper3 = new Swiper(".newLecture .swiper", {
-    slidesPerView:"auto",
+    slidesPerView:4,
     spaceBetween:10,
+    slidesPerGroup : 4,
     centeredSlides: true,
     loop:true,
     autoplay:{
-        delay:2000,
+        delay:4000,
     },
-
+    	autoHeight : true,
+  
     navigation: {
       nextEl: ".swiper--btn .swiper-button-next",
       prevEl: ".swiper--btn .swiper-button-prev",
@@ -70,9 +89,12 @@ let swiper4 = new Swiper(".review .swiper",{
   slidesPerView:3,
   spaceBetween:20,
   loop:true,
-//   autoplay:{
-//     delay:3000,
-// },
+
+
+
+  autoplay:{
+    delay:3000,
+  },
 })
 
   // banner2
