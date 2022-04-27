@@ -751,7 +751,7 @@ section .main_course_list .header .subtext {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  white-space: pre-wrap;
+  /* white-space: pre-wrap; */
 }
 
 .newLecture .swiper .swiper-slide .img img {
