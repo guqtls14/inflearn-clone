@@ -504,7 +504,7 @@ header .inner .content {
   cursor: pointer;
 }
 .swiper-slide {
-  margin: 6px;
+  /* margin: 6px; */
   /* max-width: calc((100% - 8px)/5); */
   position: relative;
 }
@@ -541,9 +541,9 @@ header .inner .content {
   margin-bottom: 0.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
+  /* display: -webkit-box;
   -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: vertical; */
   word-wrap: break-word;
 }
 .back_course_metas {
@@ -557,14 +557,15 @@ header .inner .content {
 .back_course_metas .course_level {
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
+  /* -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical; */
   white-space: nowrap;
   height: 1.2rem;
 }
-.swiper-slide img {
-  width: 232px;
-  height: 150px;
+/* welcome slide */
+.welcome .swiper-slide img {
+  width: 100%;
+  height: 100%;
 }
 section .main_course_list .header .title {
   color: #1e1e1e;
@@ -664,7 +665,7 @@ section .main_course_list .header .subtext {
 }
 
 .roadmap--main .swiper-wrapper .swiper-slide {
-  transform: translate(-50%, 0);
+  /* transform: translate(-50%, 0); */
 }
 .roadmap--main .swiper-wrapper .swiper-slide .card-image .image img {
   width: 100%;
@@ -704,7 +705,7 @@ section .main_course_list .header .subtext {
   display: flex;
 }
 .curation .main .main--img a:not(:last-child) {
-  margin-right: 38px;
+  /* margin-right: 38px; */
 }
 .curation .main .main--img a {
   width: 33.3333%;
@@ -736,7 +737,7 @@ section .main_course_list .header .subtext {
 }
 .newLecture .swiper .swiper-slide {
   /* width: 260px; */
-  transform: translate(-60%, 0);
+  /* transform: translate(-60%, 0); */
 }
 .newLecture .swiper .swiper-slide .card-content .course_title {
   /* width: 260px; */
@@ -748,9 +749,9 @@ section .main_course_list .header .subtext {
   font-size: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
+  /* display: -webkit-box;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: vertical; */
   /* white-space: pre-wrap; */
 }
 
@@ -774,8 +775,8 @@ section .main_course_list .header .subtext {
   font-size: 0.9rem;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
+  /* -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical; */
   white-space: nowrap;
 }
 .newLecture .card-content .rating {
