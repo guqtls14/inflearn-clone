@@ -22,21 +22,21 @@ let swiper1 = new Swiper(".mySwiper", {
   autoplay: {
     delay: 4000,
   },
-  // breakpoints: {
-  //   100: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 10,
-  //   },
+  breakpoints: {
+    100: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
 
-  //   640: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 10,
-  //   },
-  //   800: {
-  //     slidesPerView: 5,
-  //     spaceBetween: 10,
-  //   },
-  // },
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    800: {
+      slidesPerView: 5,
+      spaceBetween: 10,
+    },
+  },
   // pagination: {
   //     el: ".swiper-pagination",
   //     type: "fraction"
